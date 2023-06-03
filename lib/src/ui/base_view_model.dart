@@ -10,7 +10,7 @@ abstract class BaseViewModel {
   @protected
   String? loadingTitle;
 
-  BuildContext? context;
+  late BuildContext context;
 
   void initState() {}
 
