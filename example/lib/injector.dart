@@ -8,6 +8,6 @@ final injector = GetIt.instance;
 
 @injectableInit
 Future<Unit> setupInjector() async {
-  await $initGetIt(injector);
+  await injector.init();
   return unit;
 }

@@ -1,4 +1,3 @@
-import 'package:example/backend/services/account/account_service.dart';
 import 'package:example/injector.dart';
 import 'package:example/storage/count_storage.dart';
 import 'package:flutter/foundation.dart';
@@ -32,7 +31,6 @@ class CountPageModel extends BaseViewModel {
       () async {
         Map<String, dynamic> params = {};
         params["email"] = email;
-        return injector.get<AccountService>().sendOtp(params);
       },
       onSuccess: () {
         Fluttertoast.showToast(msg: 'Send OTP - Success');
@@ -48,9 +46,7 @@ class CountPageModel extends BaseViewModel {
 
   Future<Unit> login() async {
     return run(() async {
-      await injector<Oauth2Manager>().login(username: email!, password: code!);
-      String? accessToken = await injector<Oauth2Manager>().getAccessToken();
-      print(accessToken);
+      print('accessToken');
     }, onSuccess: () {
       Fluttertoast.showToast(msg: "Login success!");
     });

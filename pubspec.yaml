@@ -1,24 +1,23 @@
 name: app_core
 description: App Core Package split logic code and ui code.
 version: 1.2.0
-homepage:
 
 environment:
-  sdk: '>=2.13.0 <3.0.0'
-  flutter: ">=2.2.0"
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.10.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   # A powerful Http client for Dart, which supports Interceptors, FormData, Request Cancellation, File Downloading, Timeout etc.
-  dio: ^4.0.0
+  dio: ^5.1.2
 
   # A clean and lightweight loading/toast widget for Flutter, easy to use without context, support iOS、Android and Web
   flutter_easyloading: ^3.0.0
 
   # Toast Library for Flutter, Easily create toast messages in single line of code
-  fluttertoast: ^8.0.8
+  fluttertoast: ^8.2.2
 
   # Small, easy to use and extensible logger which prints beautiful logs.
   logger: ^1.0.0
@@ -37,6 +36,6 @@ dev_dependencies:
     sdk: flutter
 
   # An opiniated, community-driven set of lint rules for Dart and Flutter projects. Like pedantic but stricter
-  lint: ^1.6.0
+  lint: ^2.1.2
 
 flutter:
